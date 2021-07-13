@@ -1,21 +1,17 @@
+
 let pokemonRepository = (function () {
-  let pokemonList = [
-    {
-      name: "Gengar",
-      type: ["fighting", "ghost"],
-      height: 1.5
-    },
-    {
-      name: "Hypno",
-      type: ["psychic"],
-      height: 1.6
-    },
-    {
-      name: "Breloom",
-      type: ["flying", "grass"],
-      height: 1.2
-    },
-  ];
+  let pokemonList = [];
+  let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=900';
+
+  // push pokemon
+
+  function add(pokemon) {
+    if (typeof pokemon === 'object' && 'name' in pokemon) {
+      pokemonList.push(pokemon);
+    } else {
+      console.log('Please use objects to input new pokemon');
+    }
+  }
   function add(pokemon) {
       pokemonList.push(pokemon);
     }
