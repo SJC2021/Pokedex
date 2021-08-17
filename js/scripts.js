@@ -19,13 +19,6 @@ let pokemonRepository = (function () {
     function getAll() {
       return pokemonList;
     }
-
-    return {
-      add: add,
-      getAll: getAll
-    };
-  })();
-
 console.log(pokemonRepository.getAll());
 pokemonRepository.add(
   {
@@ -42,9 +35,6 @@ pokemonRepository.getAll().forEach(function(pokemon) {
 	function addListItem(pokemon){
 	  let pokemonList = document.querySelector('.list-group'); // variable assigned to <ul> in index.html
 	  let listItem = document.createElement('li'); // variable creating a list item
-	  listItem.classList.add('list-group-item'); // adds a class to each list item
-
-	  let button = document.createElement('button'); // variable creating a button
 	  button.innerText = pokemon.name; // assigning the button text to be the pokemon name
 	  // adds bootstrap class
 	  button.classList.add('btn');
@@ -161,13 +151,12 @@ pokemonRepository.getAll().forEach(function(pokemon) {
 
 	// return
 	return{
-		getAll: getAll,
-		add: add,
-		addListItem: addListItem,
-		loadList: loadList,
-		loadDetails: loadDetails,
-		showDetails: showDetails,
-		search: search
+        add: add,
+    		getAll: getAll,
+    		removeLast:removeLast,
+    		addListItem: addListItem,
+    		loadList:loadList,
+    		loadDetails:loadDetails
 	};
 
 })();
