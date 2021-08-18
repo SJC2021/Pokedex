@@ -19,8 +19,6 @@ let pokemonRepository = (function () {
     function getAll() {
       return pokemonList;
     }
-console.log(pokemonRepository.getAll());
-pokemonRepository.add(
   {
   name: 'Turtwig',
   type: ["ice"],
@@ -37,7 +35,7 @@ pokemonRepository.getAll().forEach(function(pokemon) {
 	  let listItem = document.createElement('li'); // variable creating a list item
 	  button.innerText = pokemon.name; // assigning the button text to be the pokemon name
 	  // adds bootstrap class
-	  button.classList.add('btn');
+	  button.classList.add('fancyButton');
 	  button.classList.add('btn-primary');
 	  button.classList.add('btn-lg');
 	  button.setAttribute('data-target', '#exampleModal');
@@ -131,12 +129,7 @@ pokemonRepository.getAll().forEach(function(pokemon) {
 		modalBody.append(imageElement);
 		modalBody.append(typeElement);
 		modalBody.append(heightElement);
-
-
 	}
-
-
-
 	//  Dispays pokemons
 	function showDetails(pokemon){
 		pokemonRepository.loadDetails(pokemon).then(function () {
@@ -144,11 +137,6 @@ pokemonRepository.getAll().forEach(function(pokemon) {
 			console.log(pokemon);
 		});
 	}
-
-
-
-
-
 	// return
 	return{
         add: add,
@@ -160,9 +148,6 @@ pokemonRepository.getAll().forEach(function(pokemon) {
 	};
 
 })();
-
-
-
 pokemonRepository.loadList().then(function() {
 	//^^ now the data is loaded
 	pokemonRepository.getAll().forEach(function(pokemon){
