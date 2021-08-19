@@ -18,23 +18,14 @@ let pokemonRepository = (function () {
 
     function getAll() {
       return pokemonList;
-    }
-  {
-  name: 'Turtwig',
-  type: ["ice"],
-  height: 0.4
-});
-console.log(pokemonRepository.getAll());
-
-pokemonRepository.getAll().forEach(function(pokemon) {
-  document.write(pokemon.name + " " + "height : " + pokemon.height + " " + pokemon.type + "</br>");
-});
+  
 //  pokemonList & PokemonItems
 	function addListItem(pokemon){
 	  let pokemonList = document.querySelector('.list-group'); // variable assigned to <ul> in index.html
 	  let listItem = document.createElement('li'); // variable creating a list item
 	  button.innerText = pokemon.name; // assigning the button text to be the pokemon name
 	  // adds bootstrap class
+    let listItem = document.createElement('li');
 	  button.classList.add('fancyButton');
 	  button.classList.add('btn-primary');
 	  button.classList.add('btn-lg');
