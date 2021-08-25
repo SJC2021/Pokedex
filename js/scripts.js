@@ -116,12 +116,6 @@ let pokemonRepository = (function () {
     modalBody.append(typesElement);
   }
 
-  //add event listener to search bar
-  searchInput.addEventListener("input", function () {
-    let listPokemon = document.querySelectorAll("li");
-    //let listPokemon = $('li');
-    let value = searchInput.value.toUpperCase();
-
     listPokemon.forEach(function (pokemon) {
       if (pokemon.innerText.toUpperCase().indexOf(value) > -1) {
         pokemon.style.display = "";
