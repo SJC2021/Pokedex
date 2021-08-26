@@ -116,16 +116,6 @@ let pokemonRepository = (function () {
     modalBody.append(typesElement);
   }
 
-    listPokemon.forEach(function (pokemon) {
-      if (pokemon.innerText.toUpperCase().indexOf(value) > -1) {
-        pokemon.style.display = "";
-      } else {
-        pokemon.style.display = "none";
-      }
-    });
-  });
-
-  // return all functions
   return {
     add: add,
     getAll: getAll,
