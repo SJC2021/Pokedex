@@ -9,9 +9,24 @@
 </head>
 <body>
   <ul class='pokemon-list'>
-  <div id="modal-container">
-           <div class="modal"></div>
-         </div>
+    <div class="modal fade" id="pokemonModal" tabindex="-1" role="dialog" aria-labelledby="pokemonModalLabel"
+       aria-modal="true">
+      <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Modal Title</h4>
+        </div>
+        <div class="modal-body">
+          <p>Modal testing text.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
   </ul>
   <script src="js/scripts.js"></script>
   <script type="text/javascript" src="js/promise-polyfill.js"></script>
