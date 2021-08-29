@@ -1,24 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
-    <title>Pokedex app</title>
-</head>
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+  integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+<link rel="stylesheet" href="dist\styles.min.css" type="text/css" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<title>PokeDex</title>
+<div id="logo-container">
+  <img class="logo" src="img/Pokédex_logo.png" alt="Pokedex text logo" />
+</div>
 
 <body>
-    <h1> Pokédex </h1>
-    <ul class = "pokemon-list">
-        <div id="modal-container">
-            <div class="modal"></div>
-        </div>
-    </ul>
-    <script src ="js/promise-polyfill.js"></script>
-    <script src="js/fetch-polyfills.js"></script>
-    <script src="js/scripts.js"></script>
+  <nav class="navbar justify-content-center">
+    <a class="navbar-brand" href="index.html"></a>
+
+    <form class="form-inline">
+      <input class="form-control mr-sm-2" id="search-bar" type="search" placeholder="Search.." aria-label="Search">
+    </form>
+  </nav>
+  <ul class="list-group" id="list-group">
+  </ul>
+  </button>
+<!--Modal content-->
+  <div class="modal fade" id="pokemonModal" tabindex="-1" role="dialog" aria-labelledby="pokemonModalLabel"
+     aria-modal="true">
+    <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Modal Header</h4>
+      </div>
+      <div class="modal-body">
+        <p>Some text in the modal.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+  <strong>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.js"
+      integrity="sha256-fNXJFIlca05BIO2Y5zh1xrShK3ME+/lYZ0j+ChxX2DA=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"></script>
+    <script src="src\js\fetch.umd.js"></script>
+    <script src="src\js\promise-polyfill.js"></script>
+    <script src="dist\script.min.js"></script>
+  </strong>
 </body>
 
 </html>
