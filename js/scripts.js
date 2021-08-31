@@ -65,6 +65,7 @@ let pokemonRepository = (function () {
         pokemon.height = details.height;
         pokemon.weight = details.weight;
         pokemon.abilities = details.abilities;
+        pokemon.abilities.map((pokemon= >pokemon.ability.name)
         pokemon.types = details.types;
       })
       .catch(function (e) {
